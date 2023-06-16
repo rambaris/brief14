@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "webserver" {
-   name = "nginx-server-sambatra-${var.environment}"
+   name = "server-sambatra-${var.environment}"
    location = var.location
 }
 
