@@ -94,7 +94,7 @@ resource "azurerm_network_interface" "webserver" {
 
 resource "azurerm_linux_virtual_machine" "nginx" {
    size = var.instance_size
-   name = "nginx-webserver"
+   name = "nginx-webserver-sambatra"
    resource_group_name = azurerm_resource_group.webserver.name
    location = azurerm_resource_group.webserver.location
    custom_data = base64encode(file("../azure-webserver/init-script.sh"))
@@ -109,7 +109,7 @@ resource "azurerm_linux_virtual_machine" "nginx" {
        version = "latest"
    }
 
-   computer_name = "nginx"
+   computer_name = "server-sambatra"
    admin_username = "fabio"
    admin_password = "Azerty-123"
    disable_password_authentication = false
