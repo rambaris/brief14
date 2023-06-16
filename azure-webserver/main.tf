@@ -94,7 +94,7 @@ resource "azurerm_network_interface" "webserver" {
 
 resource "azurerm_linux_virtual_machine" "nginx" {
    size = var.instance_size
-   name = "nginx-webserver-sambatra"
+   name = "webserver-sambatra"
    resource_group_name = azurerm_resource_group.webserver.name
    location = azurerm_resource_group.webserver.location
    custom_data = base64encode(file("../azure-webserver/init-script.sh"))
