@@ -1,4 +1,4 @@
 module  "Prod" {
-  source        = "../test-terra-nginx"
+  source        = "./azure-webserver-main
   environment   = "Prod"
 }
